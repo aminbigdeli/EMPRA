@@ -36,7 +36,7 @@ EMPRA/
 - **`code/scripts/`**: Command-line scripts for running the complete EMPRA pipeline
 - **`code/evaluation/`**: Evaluation scripts for attack performance, content fidelity, and linguistic acceptability
 - **`code/preprocessing/`**: Utilities for data preparation and target document selection
-- **`run_empra_pipeline.sh`**: End-to-end bash script that automates adversarial sentence generation and document construction (Steps 3-4)
+- **`run_empra_pipeline.sh`**: End-to-end bash script that automates adversarial text generation and adversarial document construction
 - **`human_evaluation/`**: Materials and results from the human evaluation study
 
 ## Attack Performance Comparison with Baselines
