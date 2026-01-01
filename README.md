@@ -23,6 +23,8 @@ EMPRA/
 └── └── README.md                   # Human evaluation documentation
 ```
 
+> **Note**: Step-by-step usage instructions are provided in this README below.
+
 ### Key Components
 
 - **`code/attack/`**: Core EMPRA attack implementation including embedding manipulation, sentence generation, and attack logic
