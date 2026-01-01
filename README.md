@@ -361,6 +361,67 @@ python code/scripts/construct_adversarial_documents.py \
 
 ---
 
+### Alternative: End-to-End Pipeline Script 🚀
+
+For convenience, you can run both Step 3 and Step 4 together using the provided bash script `run_empra_pipeline.sh`. This script automates the complete pipeline from adversarial sentence generation to document construction.
+
+```bash
+./run_empra_pipeline.sh \
+    --data-dir path/to/data/directory \
+    --collection-dir path/to/collection/directory \
+    --dataset-name trecdl2020 \
+    --target-type easy \
+    --output-dir path/to/output/directory \
+    --relevance-model path/to/bert/model \
+    --query-collection path/to/queries.tsv \
+    --doc-collection path/to/collection.tsv \
+    --max-iterations 25 \
+    --epsilon 0.01 \
+    --alpha 0.1 \
+    --embedding-batch-size 100 \
+    --model-tag S1 \
+    --coh-weight 0.5 \
+    --rel-weight 0.5 \
+    --batch-size 32 \
+    --num-labels 1 \
+    --device auto
+```
+
+**Key Features:**
+- Runs both adversarial sentence generation and document construction in sequence
+- Validates all inputs and file paths before execution
+- Provides colored logging output for better visibility
+- Supports skipping individual steps with `--skip-step1` or `--skip-step2`
+- Automatically handles file paths between steps
+
+**Required Arguments:**
+- `--data-dir`: Directory containing queries and target documents
+- `--collection-dir`: Directory containing collection.tsv
+- `--dataset-name`: Dataset name (e.g., trecdl2020)
+- `--target-type`: Target document type (`easy` or `hard`)
+- `--output-dir`: Output directory for all results
+- `--relevance-model`: Path to neural ranking model directory for relevance scoring
+- `--query-collection`: Path to query collection TSV file
+- `--doc-collection`: Path to document collection TSV file
+
+**Optional Arguments:**
+- `--max-iterations`: Maximum attack iterations (default: 25)
+- `--epsilon`: Epsilon constraint for perturbations (default: 0.01)
+- `--alpha`: Step size for gradient updates (default: 0.1)
+- `--embedding-batch-size`: Batch size for embedding (default: 100)
+- `--model-tag`: Tag for model used in output filenames (default: S1)
+- `--coh-weight`: Weight for coherence score (default: 0.5)
+- `--rel-weight`: Weight for relevance score (default: 0.5)
+- `--batch-size`: Batch size for BERT model inference (default: 32)
+- `--num-labels`: Number of labels for relevance model (default: 1)
+- `--device`: Device for BERT model: `cuda`, `cpu`, or `auto` (default: auto)
+- `--skip-step1`: Skip adversarial sentence generation
+- `--skip-step2`: Skip adversarial document construction
+
+For detailed help, run: `./run_empra_pipeline.sh --help`
+
+---
+
 ### Step 5: Evaluate Attack Performance 📊
 
 Evaluate the attack performance by computing rank promotion metrics, perplexity, and readability scores. This step uses `code/scripts/process_adv_perturbations_pipeline.py` which processes adversarial documents and calls `code/evaluation/attack_result_calculator.py` to compute metrics.

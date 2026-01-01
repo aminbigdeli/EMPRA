@@ -72,6 +72,8 @@ def main():
                         help='Batch size for embedding API calls (default: 100)')
     parser.add_argument('--num-workers', type=int, default=3,
                         help='Number of parallel workers for anchor attacks (default: 3)')
+    parser.add_argument('--embedding-model', type=str, 
+                        help='embedding model to use')
     parser.add_argument('--api-key', type=str, default=None,
                         help='OpenAI API key (default: from OPENAI_API_KEY env var)')
     
