@@ -23,7 +23,9 @@ EMPRA/
 │   ├── annotations/                # Human annotations
 │   ├── results/                    # Analysis results
 │   ├── analyze_annotations_by_method.py  # Annotation analysis script
-└── └── README.md                   # Human evaluation documentation
+│   └── README.md                   # Human evaluation documentation
+├── run_empra_pipeline.sh           # End-to-end bash script for EMPRA pipeline
+└── README.md                       # Project documentation
 ```
 
 > **Note**: Step-by-step usage instructions are provided in this README below.
@@ -34,6 +36,7 @@ EMPRA/
 - **`code/scripts/`**: Command-line scripts for running the complete EMPRA pipeline
 - **`code/evaluation/`**: Evaluation scripts for attack performance, content fidelity, and linguistic acceptability
 - **`code/preprocessing/`**: Utilities for data preparation and target document selection
+- **`run_empra_pipeline.sh`**: End-to-end bash script that automates adversarial sentence generation and document construction (Steps 3-4)
 - **`human_evaluation/`**: Materials and results from the human evaluation study
 
 ## Attack Performance Comparison with Baselines
