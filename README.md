@@ -1,3 +1,6 @@
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 # EMPRA: Embedding Perturbation Rank Attack against Neural Ranking Models
 This repository contains the code and resources for our proposed method of performing adversarial attacks on black-box Neural Ranking Models (NRMs). Our approach manipulates sentence-level embeddings to enhance the ranking positions of target documents by aligning them with the query context while maintaining semantic integrity. This results in coherent, adversarial documents that seamlessly incorporate manipulated content and remain undetectable automatic and human evaluations.
 
