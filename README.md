@@ -1,6 +1,10 @@
 # EMPRA: Embedding Perturbation Rank Attack against Neural Ranking Models
 This repository contains the code and resources for our proposed method of performing adversarial attacks on black-box Neural Ranking Models (NRMs). Our approach manipulates sentence-level embeddings to enhance the ranking positions of target documents by aligning them with the query context while maintaining semantic integrity. This results in coherent, adversarial documents that seamlessly incorporate manipulated content and remain undetectable automatic and human evaluations.
 
+<p align="center">
+  <img src="https://github.com/aminbigdeli/EMPRA/blob/main/workflow_figure.png", width="1000" height="600">
+</p>
+
 ## Attack Performance Comparison with Baselines
 In order to assess the attack performance of our surrogate-agnostic attacking method, EMPRA, we compare it with the best state-of-the-art baselines from each category including Query+, PRADA (word-level), PAT (trigger-level), Brittle-BERT(trigger-level), IDEM (sentence-level), and GPT-4 (LLM-based). The table below compare the attack performance in terms of attack success rate, boosted top-10, boosted top-50, average boost rank, perplexity and readability across target documents randomly selected from positions 51-100 (Easy-5). The comparison was made across thes best-performing surrogate model, MS(best), and the best-performing generic model, MG(best), targeting the victim NRM [cross-encoder/ms-marco-MiniLM-L-12-v2](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-12-v2).
 
