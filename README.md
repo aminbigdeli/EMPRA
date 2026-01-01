@@ -39,8 +39,7 @@ state-of-the-art baselines from each category including Query+, PRADA (word-leve
 (trigger-level), IDEM, LLM-Prompt (GPT-4), and AttackChain. The table below compare the attack performance in terms of attack 
 success rate, boosted top-10, boosted top-50, average boost rank, perplexity and readability across target documents randomly 
 selected from positions 51-100 (Easy-5). The comparison was made across thes best-performing surrogate model, MS(best), and the 
-best-performing generic model, MG(best), targeting the victim NRM [cross-encoder/ms-marco-MiniLM-L-12-v2](https://huggingface.co/
-cross-encoder/ms-marco-MiniLM-L-12-v2).
+best-performing generic model, MG(best), targeting the victim NRM [cross-encoder/ms-marco-MiniLM-L-12-v2](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-12-v2).
 
 <table class="tg"><thead>
   <tr>
