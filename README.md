@@ -261,7 +261,7 @@ best-performing generic model, MG(best), targeting the victim NRM [cross-encoder
 </tbody>
 </table>
 
-## 🚀 Usage
+## 🚀 [Usage](#Usage)
 
 This section provides step-by-step instructions to reproduce the EMPRA attack pipeline and evaluation results.
 
